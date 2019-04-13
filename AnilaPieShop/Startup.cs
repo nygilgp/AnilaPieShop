@@ -16,7 +16,9 @@ namespace AnilaPieShop
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add Transient means, when ever we reques for IPieRepository, will return MockPieRepository
             services.AddTransient<IPieRepository, MockPieRepository>();
+
             services.AddMvc();
         }
 
@@ -35,6 +37,7 @@ namespace AnilaPieShop
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+
             app.UseMvcWithDefaultRoute();
         }
     }
