@@ -11,6 +11,7 @@ namespace AnilaPieShop.Models
         public bool IsPieOfTheWeek { get; set; }
         public string ImageUrl { get; internal set; }
         public string ImageThumbnailUrl { get; internal set; }
+        public bool IsInStock { get; set;  }
 
         public Pie()
         {
