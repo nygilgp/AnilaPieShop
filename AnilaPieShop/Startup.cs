@@ -31,6 +31,7 @@ namespace AnilaPieShop
             // Add Transient means, when ever we reques for IPieRepository, will return MockPieRepository
             //services.AddTransient<IPieRepository, MockPieRepository>();
             services.AddTransient<IPieRepository, PieRepository>();
+            services.AddTransient<IFeedbackRepository, FeedbackRepository>();
 
             services.AddMvc();
         }
