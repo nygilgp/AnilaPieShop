@@ -1,10 +1,8 @@
 ﻿using System;
 namespace AnilaPieShop.Models
 {
-    public class IFeedbackRepository
+    public interface IFeedbackRepository
     {
-        public IFeedbackRepository()
-        {
-        }
+        void AddFeedback(Feedback feedback);
     }
 }
